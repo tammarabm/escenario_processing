@@ -10,8 +10,8 @@ public void setup(){
   fondo=loadImage("fondojuego.jpg"); 
   
   gato= new Jugador();
-  gato.setPosicion(new PVector(width/2, height/2));
-  gato.setVelocidad(new PVector(15,15));
+  gato.setPosicion(new PVector(0, height-260));
+  gato.setVelocidad(new PVector(5,0));
   
   anchoRect=60;
   altoRect=25;
@@ -32,9 +32,6 @@ void draw(){
   dibujarRectangulos();
   noTint();
   gato.dibujar();
-  
-  
- 
   actualizarVelocidadGato();
 
 }
@@ -57,19 +54,11 @@ public void keyPressed(){
   if(key=='a'){
     gato.mover(0);
   }
-  
-  if(key=='w'){
-    gato.mover(2);
   }
-  if(key=='s'){
-    gato.mover(3);
-  }
-  
-}
 
 public void actualizarVelocidadGato(){
-  if(gato.getPosicion().x>(width/2)){
-    gato.getVelocidad().x=30;
+  if(gato.getPosicion().x>(100)){
+    gato.getVelocidad().x=20;
   }else{
     gato.getVelocidad().x=10;
   }
