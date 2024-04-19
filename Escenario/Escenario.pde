@@ -10,13 +10,11 @@ color colorFondo= color(241, 173, 255);
 public void setup(){
   size(500,600);
   fondo=loadImage("fondojuego.jpg");
-  
   gato= new Jugador();//Crear un objeto a partir de una clase, tengo que usar new y el constructor--constructor
   gato.setPosicion(new PVector(-40, height-260));
   gato.setVelocidad(new PVector(10,0));
-  pescado= new Alimento(new PVector(0,10), new PVector(0,2));
+  pescado= new Alimento(new PVector(height/2-100,0), new PVector(0,4));
   nube= new Nube (new PVector(0,0), new PVector (3,0));
-
   
   anchoRect=60;
   altoRect=25;
@@ -32,13 +30,13 @@ void draw(){
   
   fill(#391A13);
   strokeWeight(2);
+  noTint();
+  pescado.dibujar();
   rect(coordenadasPiso.x, coordenadasPiso.y, width, height-coordenadasPiso.y);
   dibujarRectangulos();
-  noTint();
   gato.dibujar();
   actualizarVelocidadGato();
   nube.dibujar();
-  pescado.dibujar();
   pescado.mover();
   
   

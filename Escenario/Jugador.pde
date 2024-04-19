@@ -7,8 +7,9 @@ class Jugador{
   public Jugador(){   
     gato= loadImage("Gato.png");  
   }
-  public void dibujar(){
+  public void dibujar(){ 
     image(gato, posicion.x, posicion.y, 200,200);
+  
   }
   
 //Mueve la posicion hacia la izquierda o derecha segun lo que se indique en el atributo velocidad
