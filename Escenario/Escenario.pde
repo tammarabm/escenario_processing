@@ -10,10 +10,11 @@ public void setup(){
   size(500,600);
   fondo=loadImage("fondojuego.jpg");
   
-  gato= new Jugador();
-  gato.setPosicion(new PVector(0, height-260));
-  gato.setVelocidad(new PVector(5,0));
+  gato= new Jugador();//Crear un objeto a partir de una clase, tengo que usar new y el constructor--constructor
+  gato.setPosicion(new PVector(-40, height-260));
+  gato.setVelocidad(new PVector(10,0));
   pescado= new Alimentos(new PVector(0,10), new PVector(2,0));
+
   
   anchoRect=60;
   altoRect=25;
@@ -38,9 +39,7 @@ void draw(){
   pescado.mover();
   
   
-
 }
-
 public void dibujarRectangulos(){
   for(float x=coordenadasRect.x;x<width-distanciaEntreRect;x+=(anchoRect+distanciaEntreRect)){
     for( float y=coordenadasRect.y;y<height-distanciaEntreRect;y+=(altoRect + distanciaEntreRect)){ 
@@ -68,8 +67,8 @@ public void mousePressed(){
   }
   }
 public void actualizarVelocidadGato(){
-  if(gato.getPosicion().x>(100)){
-    gato.getVelocidad().x=20;
+  if(gato.getPosicion().x>90){
+    gato.getVelocidad().x=25; //obtengo la velocidad y la actualizo a 25
   }else{
     gato.getVelocidad().x=10;
   }
