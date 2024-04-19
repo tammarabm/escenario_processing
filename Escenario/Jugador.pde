@@ -4,8 +4,7 @@ class Jugador{
   private PVector velocidad;
 
   public Jugador(){
-    gato= loadImage("Gato.png");
-    
+    gato= loadImage("Gato.png");  
   }
   public void dibujar(){
     image(gato, posicion.x, posicion.y, 200,200);

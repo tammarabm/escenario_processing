@@ -14,7 +14,7 @@ public void setup(){
   gato.setPosicion(new PVector(0, height-260));
   gato.setVelocidad(new PVector(5,0));
   
-  pescado= new Alimentos(new PVector(width/2,0), new PVector(0,10));
+  pescado= new Alimentos(new PVector(0,10), new PVector(9,0));
   
   anchoRect=60;
   altoRect=25;
@@ -34,9 +34,12 @@ void draw(){
   rect(coordenadasPiso.x, coordenadasPiso.y, width, height-coordenadasPiso.y);
   dibujarRectangulos();
   noTint();
+  
   gato.dibujar();
-  pescado.dibujar();
   actualizarVelocidadGato();
+  pescado.dibujar();
+  pescado.mover();
+  
   
 
 }
@@ -48,10 +51,7 @@ public void dibujarRectangulos(){
        rect(x, y, anchoRect, altoRect);
   }
 }
-
-
 }
-
 public void keyPressed(){
   if(key=='d'){
     gato.mover(1);

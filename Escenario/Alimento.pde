@@ -13,6 +13,15 @@ class Alimentos{
     this.pescado = loadImage("pescado.png");
   }
   public void dibujar(){
-    image(pescado, posicion.x, posicion.y,50,50);
+    image(pescado, posicion.x, posicion.y,70,60);
+  }
+  public void mover(){
+    posicion.x+=velocidad.x;
+    if(this.posicion.x>width-50){
+      velocidad.x=-8;
+    }
+    if (this.posicion.x<5){
+      velocidad.x=8;
+    } 
   }
 }
