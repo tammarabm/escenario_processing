@@ -8,7 +8,7 @@ class Jugador{
     
   }
   public void dibujar(){
-  image(gato, posicion.x, posicion.y, 200,200);
+    image(gato, posicion.x, posicion.y, 200,200);
   }
   public void mover(int direccion){
     if(direccion==0){

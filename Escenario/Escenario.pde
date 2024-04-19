@@ -1,4 +1,5 @@
 private Jugador gato;
+private Alimentos pescado;
 PVector coordenadasRect;
 PVector coordenadasPiso;
 int anchoRect, altoRect, distanciaEntreRect;
@@ -12,6 +13,8 @@ public void setup(){
   gato= new Jugador();
   gato.setPosicion(new PVector(0, height-260));
   gato.setVelocidad(new PVector(5,0));
+  
+  pescado= new Alimentos(new PVector(width/2,0), new PVector(0,10));
   
   anchoRect=60;
   altoRect=25;
@@ -32,7 +35,9 @@ void draw(){
   dibujarRectangulos();
   noTint();
   gato.dibujar();
+  pescado.dibujar();
   actualizarVelocidadGato();
+  
 
 }
 
