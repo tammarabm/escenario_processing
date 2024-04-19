@@ -1,5 +1,6 @@
 private Jugador gato;
-private Alimentos pescado;
+private Alimento pescado;
+private Nube nube;
 PVector coordenadasRect;
 PVector coordenadasPiso;
 int anchoRect, altoRect, distanciaEntreRect;
@@ -13,7 +14,8 @@ public void setup(){
   gato= new Jugador();//Crear un objeto a partir de una clase, tengo que usar new y el constructor--constructor
   gato.setPosicion(new PVector(-40, height-260));
   gato.setVelocidad(new PVector(10,0));
-  pescado= new Alimentos(new PVector(0,10), new PVector(2,0));
+  pescado= new Alimento(new PVector(0,10), new PVector(0,2));
+  nube= new Nube (new PVector(0,0), new PVector (3,0));
 
   
   anchoRect=60;
@@ -35,8 +37,10 @@ void draw(){
   noTint();
   gato.dibujar();
   actualizarVelocidadGato();
+  nube.dibujar();
   pescado.dibujar();
   pescado.mover();
+  
   
   
 }

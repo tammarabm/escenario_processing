@@ -1,13 +1,13 @@
-class Alimentos{
+class Alimento{
   private PVector posicion ;
   private PImage pescado;
   private PVector velocidad;
   
-  public Alimentos(){
+  public Alimento(){
     pescado= loadImage("pescado.png");
   }
   
-  public Alimentos(PVector posicion, PVector velocidad){
+  public Alimento(PVector posicion, PVector velocidad){
     this.posicion=posicion;
     this.velocidad=velocidad;
     this.pescado = loadImage("pescado.png");
