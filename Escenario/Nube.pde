@@ -14,6 +14,11 @@ class Nube {
     this.nube = loadImage("Nube.png");
   }
   public void dibujar(){
+    image(nube, posicion.x, posicion.y, 100,100);
+
+  }
+  
+  public void mover(){
     for(int j =0; j<2; j++){
       posicion.y=10+j*100;
       image(nube, posicion.x, posicion.y, 100,100);
@@ -23,7 +28,8 @@ class Nube {
       incremento *= -1;      
         
   }
-  
+    
+    
   }
   
 }

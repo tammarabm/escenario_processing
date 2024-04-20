@@ -26,6 +26,7 @@ void draw(){
   gato.dibujar();
   actualizarVelocidadGato();
   nube.dibujar();
+  nube.mover();
   pescado.mover();
 }
 /**public void keyPressed(){
