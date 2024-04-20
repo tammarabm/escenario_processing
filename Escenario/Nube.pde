@@ -2,7 +2,7 @@ class Nube {
   private PVector posicion; 
   private PImage nube;
   private PVector velocidad;
-  private int incremento=1;
+  private Integer incremento=1;
   
   public Nube(){
      nube= loadImage("Nube.png");  
